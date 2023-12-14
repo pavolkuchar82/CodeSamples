@@ -1,7 +1,7 @@
 import requests
 import json
 
-base_url = "https://dcloud-dna-center-inst-rtp.cisco.com/dna/"
+base_url = "https://dcloud-dna-centre-inst-rtp.cisco.com/dna/"
 auth_endpoint = "system/api/v1/auth/token"
 
 user = 'demo'
