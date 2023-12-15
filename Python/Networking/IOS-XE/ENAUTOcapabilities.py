@@ -4,9 +4,9 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 
 router = {
-    "host": "ios-xe-mgmt-latest.cisco.com",
-    "port": "10000",
-    "username": "developer",
+    "host": "sandbox-iosxr-1.cisco.com",
+    "port": "830",
+    "username": "admin",
     "password": "C1sco12345"
 }
 
