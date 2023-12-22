@@ -13,16 +13,20 @@ headers = {
     "Content-Type": "application/yang-data+json"
 }
 
-url = f"https://{router['host']}:{router['port']}/restconf/data/ietf-routing:routing"
+# url = f"https://{router['host']}:{router['port']}/restconf/data/ietf-routing:routing"
+
+# response = requests.get(url=url, headers=headers, auth=(
+#     router['user'], router['password']), verify=False).json()
+'''Using here json method to parse response body immediately into python dict. '''
+
+
+# print(json.dumps(response, indent=2))
+''' just for printing purpose I am converting back to json'''
+
+
+url = f"https://{router['host']}:{router['port']}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/interface=Loopback100"
 
 response = requests.get(url=url, headers=headers, auth=(
     router['user'], router['password']), verify=False).json()
 
 print(json.dumps(response, indent=2))
-
-# url = f"https://{router['host']}:{router['port']}/restconf/data/Cisco-IOS-XE-interfaces-oper:interfaces/"
-
-# response = requests.get(url=url, headers=headers, auth=(
-#     router['user'], router['password']), verify=False).json()
-
-# print(json.dumps(response, indent=2))
